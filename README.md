@@ -7,6 +7,8 @@ members, issue and return copies, and keep an eye on overdue loans. It is a
 front-end only demo app — no account, no backend, no configuration — so you can
 clone it and have a working library desk in the browser in under a minute.
 
+**Live demo:** <https://jaswanthop.github.io/library-management-flutter/>
+
 ![Flutter](https://img.shields.io/badge/Flutter-3.47-02569B?logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-3.13-0175C2?logo=dart&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-web-1F5A4A)
@@ -92,15 +94,17 @@ python -m http.server 8080 --directory build/web
 
 ### Deploy to GitHub Pages
 
-If the site is hosted at `https://<user>.github.io/<repo>/`, build with the
+The repository includes [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml),
+which runs `flutter analyze`, `flutter test` and `flutter build web` on every push
+to `main`, then publishes `build/web` to GitHub Pages. It builds with the
 repository name as the base path:
 
 ```bash
-flutter build web --release --base-href /<repo>/
+flutter build web --release --base-href /library-management-flutter/
 ```
 
-Then publish the contents of `build/web` (for example with the
-`peaceiris/actions-gh-pages` GitHub Action).
+To deploy manually, run the build above and publish the contents of `build/web`
+(for example with the `peaceiris/actions-gh-pages` action).
 
 ---
 
