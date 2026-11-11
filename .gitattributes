@@ -1,0 +1,7 @@
+# Normalise text files to LF so builds behave the same on Windows and Linux.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
