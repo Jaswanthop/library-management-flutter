@@ -12,6 +12,8 @@ clone it and have a working library desk in the browser in under a minute.
 ![Platform](https://img.shields.io/badge/platform-web-1F5A4A)
 ![License](https://img.shields.io/badge/license-MIT-B5832F)
 
+![Shelfwise dashboard](docs/dashboard.jpg)
+
 ---
 
 ## ✨ Features
